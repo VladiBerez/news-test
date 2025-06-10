@@ -1,0 +1,73 @@
+@import '../../styles/variables.scss';
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($color-black, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: $z-index-modal;
+}
+
+.modal {
+  background: $color-white;
+  border-radius: $radius-md;
+  padding: 0;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: $shadow-lg;
+}
+
+.header {
+  padding: $space-md $space-lg;
+  border-bottom: 1px solid $color-gray-200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    margin: 0;
+    font-size: $font-size-xl;
+    color: $color-gray-900;
+  }
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: $font-size-xl;
+  cursor: pointer;
+  color: $color-gray-600;
+  padding: 0;
+  line-height: 1;
+  transition: color $transition-normal;
+
+  &:hover {
+    color: $color-gray-900;
+  }
+}
+
+.content {
+  padding: $space-lg;
+  color: $color-gray-700;
+}
+
+.footer {
+  padding: $space-md $space-lg;
+  border-top: 1px solid $color-gray-200;
+  display: flex;
+  justify-content: flex-end;
+  gap: $space-sm;
+}
+
+.cancelButton {
+  @include button-secondary;
+}
+
+.confirmButton {
+  @include button-primary;
+} 

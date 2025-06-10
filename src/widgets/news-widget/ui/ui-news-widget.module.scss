@@ -1,0 +1,32 @@
+@import '../../../shared/styles/variables.scss';
+
+.widget {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 40px;
+  padding: $space-lg;
+  max-width: $container-max-width;
+  margin: 0 auto;
+}
+
+.formContainer {
+  margin-bottom: $space-xl;
+  display: flex;
+  gap: $space-md;
+  align-items: flex-start;
+}
+
+.submitButton {
+  margin-top: $space-md;
+}
+
+.newsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($card-min-width, 1fr));
+  gap: $grid-gap;
+  margin-top: $space-lg;
+  
+  @include respond-to('mobile') {
+    grid-template-columns: 1fr;
+  }
+} 
