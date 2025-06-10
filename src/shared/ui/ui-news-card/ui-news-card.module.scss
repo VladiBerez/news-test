@@ -1,5 +1,3 @@
-@import '../../../../shared/styles/variables.scss';
-
 .card {
   background: $color-white;
   border-radius: $radius-md;
@@ -19,41 +17,26 @@
   width: 100%;
   height: 200px;
   background-color: $color-gray-200;
-}
-
-.content {
-  padding: $space-md;
-}
-
-.title {
-  font-size: $font-size-lg;
-  font-weight: $font-weight-bold;
-  color: $color-gray-900;
-  margin-bottom: $space-sm;
-}
-
-.text {
-  color: $color-gray-700;
   margin-bottom: $space-md;
+  border-radius: $radius-sm;
+  overflow: hidden;
+}
+
+.newsImage {
+  object-fit: cover;
+}
+
+.newsContent {
+  color: $color-gray-700;
+  margin: $space-md 0;
   line-height: 1.5;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: $space-sm $space-md;
-  border-top: 1px solid $color-gray-200;
-}
-
-.date {
-  color: $color-gray-600;
-  font-size: $font-size-sm;
 }
 
 .cardActions {
   display: flex;
   gap: $space-sm;
+  margin-top: auto;
+  padding-top: $space-md;
 }
 
 .editButton {

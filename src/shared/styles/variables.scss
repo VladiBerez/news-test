@@ -80,9 +80,12 @@ $breakpoints: (
   'large': 1200px
 );
 
+@use "sass:map";
+@use "sass:color";
+
 @mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (max-width: map-get($breakpoints, $breakpoint)) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (max-width: map.get($breakpoints, $breakpoint)) {
       @content;
     }
   } @else {
@@ -152,12 +155,12 @@ $breakpoints: (
 
 @mixin button-danger {
   @include button-base;
-  background-color: $color-danger;
+  background-color: color.adjust($color-danger, $lightness: -10%);
   color: $color-white;
-  border: 1px solid darken($color-danger, 10%);
+  border: 1px solid color.adjust($color-danger, $lightness: -10%);
 
   &:hover {
-    background-color: darken($color-danger, 10%);
+    background-color: color.adjust($color-danger, $lightness: -10%);
   }
 
   &:disabled {

@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { UiNewsCard } from "@/entities/news/ui/ui-news-card/ui-news-card";
+import { UiNewsCard } from "@/shared/ui/ui-news-card/ui-news-card";
 import { UiNewsForm } from "@/features/news/ui/ui-news-form/ui-news-form";
 import { useNews } from "@/features/news/model/useNews";
 import { UiModal } from "@/shared/ui/ui-modal/ui-modal";
 import { UiSpinner } from "@/shared/ui/ui-spinner/ui-spinner";
 import styles from "./ui-news-widget.module.scss";
-import { NewsItem } from "@/entities/news/model/types";
+import { NewsItem } from "@/shared/api/news/types";
 
 export const UiNewsWidget = () => {
   const { news, isLoading, addNews, updateNews, deleteNews } = useNews();

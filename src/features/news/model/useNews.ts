@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from "react";
-import { NewsItem } from "@/entities/news/model/types";
+import { NewsItem } from "@/shared/api/news/types";
 import { getNews, saveNews } from "@/shared/lib/local-storage";
 
 export const useNews = () => {

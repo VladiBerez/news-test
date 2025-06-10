@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Image from "next/image";
-import { NewsItem } from "@/entities/news/model/types";
 import { UiModal } from "@/shared/ui/ui-modal/ui-modal";
 import styles from "./ui-news-card.module.scss";
+import { NewsItem } from "@/shared/api/news/types";
 
 interface NewsCardProps {
   news: NewsItem;

@@ -1,4 +1,4 @@
-import { NewsItem } from "@/entities/news/model/types";
+import { NewsItem } from "@/shared/api/news/types";
 
 const NEWS_STORAGE_KEY = "news";
 

@@ -1,13 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
-  },
-}
+import path from 'path';
 
-module.exports = nextConfig 
+const nextConfig = {
+  sassOptions: {
+    includePaths: [path.join(process.cwd(), 'src/shared/styles')],
+    additionalData: `@import "variables.scss";`,
+  },
+  images: {
+    domains: ['*'],
+  },
+};
+
+export default nextConfig; 

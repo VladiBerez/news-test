@@ -1,5 +1,5 @@
 import { useState, FormEvent, useEffect } from "react";
-import { NewsItem } from "@/entities/news/model/types";
+import { NewsItem } from "@/shared/api/news/types";
 import styles from "./ui-news-form.module.scss";
 
 interface NewsFormProps {

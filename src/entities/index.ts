@@ -1,3 +1,3 @@
-import { NewsItem, newsService, NewsCard } from "./news";
+import { NewsItem, newsService, UiNewsCard } from "./news";
 
-export { type NewsItem, newsService, NewsCard };
+export { type NewsItem, newsService, UiNewsCard };
