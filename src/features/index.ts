@@ -1,3 +1,3 @@
-import { useNews, NewsForm } from "./news";
+import { useNews, UiNewsForm } from "./news";
 
-export { useNews, NewsForm };
+export { useNews, UiNewsForm };

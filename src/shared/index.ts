@@ -1,4 +1,4 @@
 import { storage } from "./lib";
-import { Spinner } from "./ui";
+import { UiSpinner } from "./ui";
 
-export { storage, Spinner };
+export { storage, UiSpinner };

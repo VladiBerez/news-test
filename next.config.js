@@ -10,8 +10,10 @@ const nextConfig = {
     domains: ['*'],
     unoptimized: true
   },
-  output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/news-test' : '',
+  ...(process.env.NODE_ENV === 'production' ? {
+    output: 'export',
+    basePath: '/news-test'
+  } : {})
 };
 
 export default nextConfig; 
