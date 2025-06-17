@@ -1,6 +1,31 @@
 # News Test
 
-This is a Next.js project deployed on GitHub Pages.
+Новостное приложение на Next.js с деплоем на GitHub Pages.
+
+## Технологии
+
+- Next.js 14
+- React 18
+- SASS
+- TypeScript
+- GitHub Actions для автоматического деплоя
+
+## Разработка
+
+```bash
+# Установка зависимостей
+npm ci
+
+# Запуск в режиме разработки
+npm run dev
+
+# Сборка
+npm run build
+```
+
+## Деплой
+
+Приложение автоматически деплоится на GitHub Pages при пуше в ветку `main`.
 
 ## Deployment
 
