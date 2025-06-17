@@ -4,19 +4,24 @@ import styles from "./ui-news-form.module.scss";
 
 interface NewsFormProps {
   initialData?: NewsItem | null;
+  descripton?: Record<string, string> | null;
+  node?: React.ReactNode | null;
   onSubmit: (data: Omit<NewsItem, "id" | "createdAt" | "updatedAt">) => void;
   buttonClassName?: string;
 }
 
 export const UiNewsForm = ({
   initialData,
+  descripton = null,
   onSubmit,
+  node = null,
   buttonClassName = "",
 }: NewsFormProps) => {
   const [formData, setFormData] = useState({
     title: "",
     content: "",
     imageUrl: "",
+    ...descripton,
   });
 
   useEffect(() => {
@@ -25,12 +30,14 @@ export const UiNewsForm = ({
         title: initialData.title,
         content: initialData.content,
         imageUrl: initialData.imageUrl || "",
+        ...descripton,
       });
     } else {
       setFormData({
         title: "",
         content: "",
         imageUrl: "",
+        ...descripton,
       });
     }
   }, [initialData]);
@@ -42,6 +49,9 @@ export const UiNewsForm = ({
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
+      <select>
+        <div>asdasd</div>
+      </select>
       <div className="form-group">
         <label htmlFor="title">Title</label>
         <input
@@ -53,7 +63,6 @@ export const UiNewsForm = ({
           required
         />
       </div>
-
       <div className="form-group">
         <label htmlFor="content">Content</label>
         <textarea
@@ -67,7 +76,6 @@ export const UiNewsForm = ({
           rows={5}
         />
       </div>
-
       <div className="form-group">
         <label htmlFor="imageUrl">Image URL (optional)</label>
         <input
@@ -80,7 +88,7 @@ export const UiNewsForm = ({
           }
         />
       </div>
-
+      {node ? node : null}
       <button
         type="submit"
         className={`button button-primary ${buttonClassName}`}

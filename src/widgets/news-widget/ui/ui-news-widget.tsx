@@ -13,6 +13,11 @@ export const UiNewsWidget = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newsToDelete, setNewsToDelete] = useState<string | null>(null);
 
+  const [formData, setFormData] = useState({
+    descripton: "",
+    price: "",
+  });
+
   const handleEdit = (news: NewsItem) => {
     setEditingNews(news);
   };
@@ -52,6 +57,31 @@ export const UiNewsWidget = () => {
           initialData={editingNews}
           onSubmit={handleSubmit}
           buttonClassName={styles.submitButton}
+          descripton={formData}
+          node={
+            <>
+              <div>
+                <input
+                  placeholder="Desription"
+                  id="descripton"
+                  value={formData.descripton}
+                  onChange={(e) =>
+                    setFormData({ ...formData, descripton: e.target.value })
+                  }
+                />
+              </div>
+              <div>
+                <input
+                  placeholder="Price"
+                  id="price"
+                  value={formData.price}
+                  onChange={(e) =>
+                    setFormData({ ...formData, price: e.target.value })
+                  }
+                />
+              </div>
+            </>
+          }
         />
       </div>
 
